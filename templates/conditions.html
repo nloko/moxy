@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='/css' />
+<title>Moxy - Conditions</title>
+<script>
+	function setItem(id) {
+		document.getElementById('id').value = id;
+		submit();
+	}
+	function submit() {
+		document.getElementById('form').submit();
+	}
+</script>
+</head>
+<body>
+	<h1>Moxy</h1>
+	<div class='nav'>
+		<a href='/config'>Home</a> | <a href='/config/show'>Display Config</a> | <a href='/config/refresh'>Refresh Config</a> | Conditions
+	</div>
+	<p style='width: 400px;'>
+		Below, are all conditions specified in logical expressions within Moxy's configuration
+		file. To toggle the value the condition evaluates to, click the condition. 
+	</p>
+	<form method='post' action='/config/conditions' id='form'>
+	<table border='0'>
+	<tr>
+		<td><b>Condition</b></td>
+		<td><b>Evaluates To</b></td>
+		$rows	
+	</table>
+	<input type='hidden' name='id' id='id' value='' />
+	</form>
+</body>
+</html>

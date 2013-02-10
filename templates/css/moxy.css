@@ -1,0 +1,17 @@
+body {
+	font-family: Helvetica, Arial, 'sans-serif';
+	margin: 20px;
+}
+p {
+	font-size: 14px;
+}
+a {
+	color: #777;
+	text-decoration: none;
+}
+a:hover {
+	color: #000;
+}
+td {
+	width: 120px;
+}
