@@ -93,11 +93,13 @@ will be the one used. Order of statements is important.
 
 The format is:
 
-	if conditional:
+	if expr:
 
-*conditional* is composed of a logical expression. Valid operators are *not*, *and*, and *or*.  
+*expr* is a logical expression. Valid operators are *not*, *and*, and *or*.  
 Parentheses are supported.
 
-Each operand in the expression will create a *condition* within Moxy. Conditions can be viewed
-at http://localhost:8889/conditions. Toggle the values the conditions evaluate to in order
-to satisfy/unsatisfy conditional statements. Conditions can be reused in more than one statement.
+Each operand in the expression will create a *condition* within Moxy. 
+Conditions can be reused in more than one statement.  
+
+Conditions can be viewed at `http://localhost:8889/conditions`. Here, values 
+can be toggled in order to satisfy/unsatisfy conditional statements.
