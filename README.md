@@ -16,7 +16,10 @@ development team may take some time to develop. Since the client team can code
 without the service existing (as long as the interface for the service has been
 defined), the client team should be able to test without the service existing as
 well.
- 
+
+This, hopefully, removes the need for temporary code, preprocessing statements, etc. 
+for the purposes of testing networking code.
+
 ##How?
 
 Start Moxy from the command line by issuing:
@@ -53,6 +56,8 @@ The format is:
 	url regex
 
 *regex* is a regular expression that matches the URL of an HTTP request.
+
+Any non-matching requests will simply pass through as if Moxy wasn't there.
 
 ### Response
 
@@ -93,13 +98,20 @@ will be the one used. Order of statements is important.
 
 The format is:
 
-	if expr:
+	if expr: config
 
 *expr* is a logical expression. Valid operators are *not*, *and*, and *or*.  
-Parentheses are supported.
+Parentheses are supported.  
+*config* is any configuration setting except *url*.
 
 Each operand in the expression will create a *condition* within Moxy. 
 Conditions can be reused in more than one statement.  
 
 Conditions can be viewed at `http://localhost:8889/conditions`. Here, values 
 can be toggled in order to satisfy/unsatisfy conditional statements.
+
+##Configuration Service
+
+Moxy has a web-based configuration interface. It can be accessed at
+`http://localhost:8889/`. From here, the configuration can be viewed,
+refreshed, and conditions can be modified.

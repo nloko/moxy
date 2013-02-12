@@ -228,8 +228,7 @@ def build_expr_tree(expr):
 	"""
 	Build an expression tree from the passed logical
 	expression represented as a list where each item
-	is either a operator or operand. Parentheses are
-	not supported
+	is either an operator or operand.
 	"""
 	if not expr:
 		return None
